@@ -1,0 +1,27 @@
+<section id="formulario" class="center form-update">
+    <div id="logo-formulario">
+        <img src="assets/images/portada.jpg" />
+    </div>
+
+    <form class="campos-form" [formGroup]="form"  (ngSubmit)="onSubmit(form.value)">
+        <div class="form-group">
+            <input type="text" name="titulo" placeholder="Titulo" formControlName ="nombre"/>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="autor" placeholder="Autor" formControlName ="autor"/>
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="categoria" placeholder="Categoria" formControlName ="categoria"/>
+        </div>
+        <div class="form-group">
+            <input type="number" name="isbn" placeholder="ISBN" formControlName ="isbn"/>
+        </div>
+
+        <div class="clearfix"></div>
+        <input type="submit" value="ACTUALIZAR" />
+    </form>
+    <hr width="75%" size="1px" color="gray">
+    <a [routerLink]="['/libros']" class="center btn"> VOLVER </a>
+</section>

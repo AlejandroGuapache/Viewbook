@@ -1,0 +1,25 @@
+<div class="pagina-libro">
+    <div class="transparencia">
+        <div id="imagen-libro">
+            <img src="./assets/images/portada.jpg" />
+        </div>
+
+        <div class="contenido-libro" *ngIf="libro">
+            <h1 class="margin-zero">{{libro.titulo}}</h1>
+            <h4 class="margin-zero">Autor: {{libro.autor}}</h4>
+            <h6 class="margin-zero">ISBN: {{libro.isbn}}</h6>
+
+            <p>{{libro.sinopsis}}</p>
+
+            <div class="btns-libro">
+                <a (click)="addLibro(libro)" *ngIf="user" class="center btn-compra-libro"> COMPRAR </a>
+                <a [routerLink]="['/login']" *ngIf="!user" class="center btn-compra-libro"> COMPRAR </a>
+                <a [routerLink]="['/libros']" class="btn-volver">VOLVER</a>
+                <a *ngIf="user && user.admin == true" [routerLink]="['/list-compras', libro.isbn]"
+                    class="btn-modificar-libro">LISTA COMPRAS</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clear-fix"></div>

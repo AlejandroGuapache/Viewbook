@@ -1,0 +1,18 @@
+<div class="center letreros">
+    <div>
+        <h1>Mis libros</h1>
+    </div>
+</div>
+<div *ngIf = "libros?.length > 0" class="contenido center">
+    <article  *ngFor="let libro of libros">
+        <div class="portada">
+            <a [routerLink]="['/libro', libro.isbn]"> <img src="assets/images/portada.jpg" /> </a>
+            <p id="titulo">{{libro.titulo}}</p>
+            <p id="autor">{{libro.autor}}</p>
+
+            <a (click)="deleteBookToUser (libro.id, user.id)" *ngIf="user" class="center btn-eliminar"> Devolver </a>
+            <a [routerLink]="['/libro', libro.isbn]" class="center btn-modificar"> Más info </a>
+        </div>
+    </article>
+</div>
+<a class="center btn-crear" [routerLink]="['/libros']"> Comprar más libros </a>

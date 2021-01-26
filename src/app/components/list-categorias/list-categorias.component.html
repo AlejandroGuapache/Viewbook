@@ -1,0 +1,14 @@
+<div class="categorias">
+    <div class="content-categorias">
+        <ul>
+            <li class="categoria"><a (click) = "cambiarGenero('Terror')"> <img src="./assets/images/ico_Terror.png"> Terror</a> </li>
+            <li class="categoria"><a (click) = "cambiarGenero('Misterio')"> <img src="./assets/images/ico_misterio.png"> Misterio </a></li>
+            <li class="categoria"><a (click) = "cambiarGenero('Ficcion')"> <img src="./assets/images/ico_ficcion.png"> Ficción </a> </li>
+            <li class="categoria"><a (click) = "cambiarGenero('Suspense')"> <img src="./assets/images/ico_suspense.png"> Suspense </a> </li>
+            <li class="categoria"><a (click) = "cambiarGenero('Historia')"> <img src="./assets/images/ico_historia.png"> Historia </a> </li>
+            <li class="categoria"><a (click) = "cambiarGenero('Audiolibro')"> <img src="./assets/images/ico_audiolibro.png"> Audiolibro </a> </li>
+        </ul>
+    </div>
+</div>
+
+<app-categoria [categoria] = "categoria"></app-categoria>

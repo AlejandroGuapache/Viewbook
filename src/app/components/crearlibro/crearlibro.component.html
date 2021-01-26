@@ -1,0 +1,27 @@
+<section id="formulario" class="center form">
+    <div id="logo-formulario">
+        <img src="./assets/images/logo.png" />
+    </div>
+
+    <form class="campos-form" #libroNuevoForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input type="text" name="titulo" placeholder="Titulo" #titulo="ngModel" [(ngModel)]="libroNuevo.titulo" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="autor" placeholder="Autor" #autor="ngModel" [(ngModel)]="libroNuevo.autor" />
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="categoria" placeholder="Categoria" #categoria="ngModel"
+                [(ngModel)]="libroNuevo.categoria" />
+        </div>
+
+        <div class="form-group">
+            <input type="number" name="isbn" placeholder="Isbn" #isbn="ngModel" [(ngModel)]="libroNuevo.isbn" />
+        </div>
+
+        <div class="clearfix"></div>
+        <input type="submit" value="CREAR LIBRO" />
+    </form>
+</section>

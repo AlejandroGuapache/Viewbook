@@ -1,0 +1,23 @@
+<div class="center letreros">
+    <div>
+        <h1>Sección de libros</h1>
+    </div>
+</div>
+<div class="contenido center">
+    <article *ngFor="let libro of libros" class="articulo">
+        <div class="portada">
+            <a [routerLink]="['/libro', libro.isbn]"> <img src="assets/images/portada.jpg" /> </a>
+            <p id="titulo">{{libro.titulo}}</p>
+            <p id="autor">{{libro.autor}}</p>
+
+            <a (click)="addLibro(libro)" *ngIf="user" class="center btn-comprar"> Comprar </a>
+            <a [routerLink]="['/login']" *ngIf="!user" class="center btn-comprar"> Comprar </a>
+
+            <a [routerLink]="['/libro/modificarlibro', libro.isbn]" *ngIf="user && user.admin == true"
+                class="center btn-modificar"> Modificar </a>
+            <a (click)="delete(libro.isbn)" *ngIf="user && user.admin == true" class="center btn-eliminar"> Eliminar
+            </a>
+        </div>
+    </article>
+</div>
+<a class="center btn-crear" *ngIf="user && user.admin == true" [routerLink]="['/crearlibro']"> Crear Libro </a>

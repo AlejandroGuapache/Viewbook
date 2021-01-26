@@ -1,0 +1,21 @@
+<section id="formulario" class="center form">
+    <div id="logo-formulario">
+        <img src="./assets/images/logo.png" />
+    </div>
+
+    <form class="campos-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input type="text" name="dni" formControlName ="dni" placeholder="DNI"/>
+            <div class="error" *ngIf="form.get('dni').hasError('required') && (form.get('dni').dirty || form.get('dni').touched)" >
+                Este campo es obligatorio
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <input type="submit" value="ENTRAR"/>
+    </form>
+
+    <hr width="75%" size="1px" color="gray">
+
+    <a [routerLink]="['/signup']" class="center btn"> Crear un cuenta</a>
+</section>

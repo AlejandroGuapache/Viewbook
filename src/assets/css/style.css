@@ -1,0 +1,1139 @@
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    color: rgb(155, 179, 255);
+}
+
+.active a{
+    color: rgb(155, 179, 255);
+}
+
+ul li{
+    list-style: none;
+
+}
+section{
+    min-height: 800px;
+}
+
+.center{
+    margin: 0px auto;
+}
+
+.clear-fix{
+    clear: both;
+    float: none;
+}
+
+.search{
+    float: right;
+    width: 25% !important;
+    display: block;
+}
+
+#logo{
+    width: 13%;
+    float: left;
+}
+
+#logo img{
+    display: block;
+    float: left;
+    height: 85px;
+}
+
+#header {
+    height: 85px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px -5px 20px #666; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    -webkit-font-smothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    position: relative;
+    z-index: 1;
+}
+
+#cabecera{
+    width: 100%;
+    margin: 0px auto;
+}
+
+#menu ul{
+    width: 97%;
+    line-height: 80px;
+    margin: 0px auto;
+    padding: 0px !important;
+}
+
+#menu ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#menu a{
+    color: black
+}
+
+#menu a:hover{
+    color: rgb(155, 179, 255);
+    transition: 500ms;
+}
+
+#registro {
+    float: right;
+    cursor: pointer;
+}
+
+#registro-nombre {
+    float: right;
+    cursor: pointer;
+}
+
+#signup, #signup-name {
+    display: block;
+    background: rgb(64, 126, 219);
+    padding: 10px;
+    height: 20px;
+    min-width: 125px;
+    margin: 0px auto;
+    margin-top: 10px;
+    font-size: 18px;
+    text-shadow: none;
+    line-height: 21px;
+    border-radius: 4px;
+    transition: 500ms all;
+}
+
+#signup a {
+    color: white;
+    
+}
+#signup img {
+    height: 20px;
+    vertical-align: -3px;
+}
+
+#footer {
+    background: #282A2B;
+    width: 100%;
+    color: white;
+}
+
+#footer table {
+    border-collapse: separate;
+    width: 35%;
+    margin: 0px auto !important;
+    border-spacing: 40px 6px !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    padding-top: 8px;
+}
+
+#footer li {
+    list-style-type: none;
+    padding-inline-start: 0px !important;
+    width: 107px;
+    line-height: 21px;
+
+}
+
+#footer ul {
+    padding-inline-start: 0px !important;
+    margin-block-start: 0px;
+
+}
+
+#footer a {
+    color: white;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#footer table td, th{
+    vertical-align: top;
+
+    text-align: left !important;
+}
+
+#contacto {
+    margin-left: 85px;
+}
+
+.contacto{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea{
+    border-radius: 4px;
+}
+
+#copy{
+    padding-bottom: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: gray;
+}
+
+th, td {
+    height: 30px;
+    text-align: left !important;
+    vertical-align: top;
+}
+
+/* Slider */
+.slider {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    -moz-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    position: relative;
+    width: 95%;
+    background: black;
+}
+ 
+.slider ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+}
+
+.slides img {
+    height: 510px;
+}
+.slider ul li  {
+    position: relative;
+    display: none;
+    height:510px;
+}
+ 
+.slider ul li img {
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Botones */
+.slider .buttons  {
+    position: absolute;
+    top: 40%;
+    width:  100%;
+}
+.slider .buttons .next {
+    font-size: 2rem;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    color: wheat;
+}    
+.slider .buttons .prev {
+    font-size: 2rem;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    color: wheat;
+}   
+.slider .buttons .next:hover {
+    background: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 93%);
+}
+.slider .buttons .prev:hover {
+    background: hsl(0, 0%, 25%);
+    color: hsl(0, 0%, 93%);
+    
+}
+ 
+/* Animación del slider */
+.slider ul li {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .2} 
+    to {opacity: 1}
+}
+
+
+/* Forma de letreros */
+.letreros {
+    -webkit-transform: skew(-25deg);
+    -moz-transform: skew(-25deg);
+    -ms-transform: skew(-25deg);
+    -o-transform: skew(-25deg);
+    transform: skew(-25deg);
+    background: #c9960bc9 !important; 
+    width: 95%;
+    height: 45px;
+
+}
+
+/* Correción de texto */
+.letreros h1{
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    line-height: 45px;
+}
+
+/*Articulos*/
+
+.articulo{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom:20px;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    max-width: 1860px;
+}
+
+.portada {
+    width: 20%;
+}
+
+
+.portada img{
+    margin-top: 25px;
+    height: 200px;
+}
+
+#titulo {
+    margin: 0px;
+    font-family: Roboto,Arial,Helvetica,Tahoma,sans-serif;
+    font-size: 13px;
+    width: 135px !important;
+}
+
+#autor{
+    margin: 0px;
+    font-family: Roboto,Arial,Helvetica,Tahoma,sans-serif;
+    font-size: 13px;
+    color: gray;
+    width: 140px !important;
+
+}
+
+#banner img {
+    height: 450px ;
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 45px;
+}
+
+#textbanner {
+    margin: 0 auto !important
+}
+
+#textbanner p{
+    width: 430px;
+    text-align: justify;
+    margin-top: 0px;
+    font-family: Roboto,Arial,Helvetica,Tahoma,sans-serif;
+}
+
+#textbanner h2 {
+    font-family: Roboto,Arial,Helvetica,Tahoma,sans-serif;
+}
+
+
+.audiolibro{
+    display: flex;
+    align-items: center;
+}
+
+#video{
+    float: right;
+}
+
+header label {
+    display: block;
+    width: 30px;
+    height: 30px; 
+    padding: 20px;
+    border-right: 1px;
+}
+
+header label img {
+    width: 30px;
+    height: 30px; 
+    display: none;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba (0, 0, 0, 0.3);
+}
+
+/* Botones */
+.btns-libro{
+    display: flex !important;
+    align-items: baseline;
+}
+.btns-libro a{
+    margin-right: 13px;
+}
+
+.btn-volver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.btn-modificar-libro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: rgb(255, 185, 34);
+    color: rgb(255, 255, 255);
+
+    margin-bottom: 20px;
+}
+
+#btn-menu {
+    display: none;
+}
+.btn-crear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: green;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-compra-libro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: green;
+    color: white;
+    margin-bottom: 20px;
+}
+.btn-comprar{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: green;
+    color: white;
+}
+.btn-eliminar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.btn-modificar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: rgb(255, 208, 0);
+    color: white;
+}
+
+.btn {
+    margin-top: 25px;
+    display: block;
+    background:  black;
+    color: white;
+    padding: 13px;
+    font-weight: bold;
+    width: 250px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Usuarios*/
+
+.user-card{
+    -webkit-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    -moz-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    transition: 0.3s;
+    margin-top: 50px;
+    border-radius: 7px;
+    height: 250px;
+    width: 54%;
+    background: black;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.user-card:hover {
+    -webkit-box-shadow: 0px 1px 17px 7px rgb(12, 91, 151);
+    -moz-box-shadow: 0px 1px 17px 7px rgb(12, 91, 151);
+    box-shadow: 0px 1px 17px 7px rgb(13, 106, 177);
+}
+
+#foto-card{
+    display: flex;
+    align-items: flex-start;
+}
+
+#foto-card img{
+    margin-top: 19px;
+    margin-left: 17px;
+    width: 300px !important;
+    border: 5px solid white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-width: 338px;
+    line-height: 0;
+}
+
+.btn-usuario-modificar {
+    margin-top: 25px;
+    display: block;
+    background:  rgb(253, 194, 0);
+    color: white;
+    padding: 13px;
+    font-weight: bold;
+    width: 250px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#btns-cards{
+    margin-top: 42px;
+}
+.btn-usuario-eliminar {
+    margin-top: 25px;
+    display: block;
+    background:  rgb(255, 42, 42);
+    color: white;
+    padding: 13px;
+    font-weight: bold;
+    width: 250px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Formularios*/
+#logo-formulario img{
+    margin-top: 45px;
+    margin-bottom: 10px;
+    height: 120px;
+}
+
+.error{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 10px;
+}
+
+.form {
+    margin-top: 50px;
+    width: 450px;
+    height: 519px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    -moz-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+}
+
+.form-update {
+    margin-top: 50px;
+    width: 23%;
+    height: 600px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    -moz-box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+    box-shadow: 0px 1px 17px 7px rgba(36,160,255,1);
+}
+
+.campos-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup-form {
+    height: 913px;
+
+}
+
+#contacto-form{
+    height: 600px;
+
+}
+
+.form label{
+    text-align: left;
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Tablas */
+
+.content-table{
+    margin-top: 30px;
+}
+
+.ventas{
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tabla-compra {
+    border: 2px solid black;
+    border-radius: 6px;
+    border-spacing: 0px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    color: black;
+    margin-top: 30px;
+}
+
+.tabla-compra th{
+    background-color: #267dc4;
+    color: white;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.fila2{
+    background: rgb(100, 100, 100);
+    color: white;
+}
+
+.tabla-compra th, td{
+    vertical-align: middle;
+    text-align: center !important;
+}
+
+/*Inputs*/
+
+input[type="text"], 
+[type="number"],
+[type="password"],
+[type="email"]
+{
+    width: 250px;
+    min-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 300ms all;
+    padding-left: 20px;
+}
+
+.radiobuttons{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+input[type="submit"]{
+    width: 63%;
+    min-height: 30px;
+    margin-bottom: 43px;
+    margin-top: 15px;
+    border: 0px;
+    color: white;
+    font-size: 15px ;
+    font-weight: bold;
+    background:  rgba(36,160,255,1);
+}
+
+/* Página de libro */
+
+.pagina-libro{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../images/fondopagina.jpg");
+    background-color: black;
+    background-size: 1000px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    height: 780px;
+    border-top: 20px solid black;
+}
+
+.contenedor-pagina{
+    width: 100%;
+    height: 30px;
+    background: black;
+}
+
+.transparencia{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.719) !important;
+    justify-content: center;
+}
+
+.transparencia img {
+    height: 350px;
+    margin-top: 40px;
+}
+
+.contenido-libro{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+    max-width:  600px;
+    font-family: "RobotoCondensed","Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+
+.contenido-libro p {
+    text-align: justify;
+    min-width: 500px;
+    min-height: 151px;
+}
+
+#imagen-libro{
+    display: flex;
+}
+
+.margin-zero{
+    margin-bottom: 0px;
+}
+
+/*Categorias*/
+.categorias{
+    display: block;
+    float: left;
+    text-align: justify;
+    line-height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 180px;
+    cursor: pointer;
+}
+
+.categorias li img{
+    height: 25px;
+    vertical-align: -6px;
+}
+
+.content-categorias{
+    margin: 0px;
+    padding-right: 20px;
+}
+
+.letreros-categoria{
+    transform: skew(-25deg);
+    background: #c9960bc9 !important;
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    margin-top: 30px;
+}
+
+.letreros-categoria h1{
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    line-height: 17px;
+}
+
+/*Autores*/
+.autores{
+    display: block;
+    float: left;
+    text-align: justify;
+    line-height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 235px;
+    cursor: pointer;
+}
+/* Resposive */
+@media (max-width: 1538px){
+    .audiolibro {
+        display: inline-grid;
+    }
+
+    #textbanner {
+        display: block;
+        
+    }
+
+    #textbanner p {
+        width: 50%;
+        display: inline-table;
+    }
+
+    #banner img{
+        height: 306px;
+        float: none;
+    }
+    
+    #footer table{
+        width: 52%;
+    }
+
+}
+
+@media (max-width: 1368px){
+    #menu ul{
+        font-size: 15px;
+        margin-left: 38px;
+    }
+
+    #signup{
+        font-size: 17px !important;
+    }
+}
+
+@media (max-width: 1142px){
+    .slider ul li img {
+        height: 70%;
+    }
+
+    .slider{
+        height: 380px;
+    }
+}
+
+@media (max-width: 1338px){
+    #logo-formulario img{
+        margin-top: 45px;
+        height: 85px;
+    }
+    .btn {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1214px){
+    #menu ul{
+        font-size: 15px;
+        margin-left: 38px;
+    }
+
+    #signup{
+        font-size: 17px !important;
+    }
+
+    #logo{
+        width: 100%;
+        float: none;
+    }
+
+    #logo img {
+        float: none;
+        display: inline;
+    }
+
+    #signup-form{
+        width: 300px;
+
+    }
+    #menu ul li {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+    
+    #footer table{
+        width: 64%;
+    }
+
+
+    input[type="text"], 
+    [type="number"],
+    [type="password"]{
+        width: 195px;
+    }
+}
+
+@media (max-width: 954px){
+    .slider{
+        height: 300px;
+    }
+
+    .slider ul li img {
+        height: 56%;
+    }
+}
+
+@media (max-width: 896px){
+    #menu ul li {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    #registro-nombre{
+        width:100%
+    }
+}
+
+@media (max-width: 886px){
+    #menu ul li {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    #menu ul{
+        line-height: 70px;
+    }
+
+    #banner img {
+        height: 150px;
+        float: none;
+    }
+    .contenido-libro {
+        width: 310px;
+    }
+    .contenido-libro p {
+        min-width: auto;
+    }
+
+    .transparencia img {
+        height: 275px;
+    }
+
+}
+
+@media (max-width: 785px){
+    .portada img {
+        height: 168px;
+        margin-left: 10px;
+    }
+
+    #registro img {
+        display: none;
+    }
+
+    #signup{
+        font-size: 14px !important;
+        padding: 4px;
+    }
+
+    #banner img{
+        height: 200px;
+    }
+
+    iframe{
+        width:250px ;
+        height:200px
+    }
+    
+}
+
+@media(max-width: 607px){
+    .portada img {
+        height: 100px;
+        margin-left: 30px;
+    }
+    #signup {
+        font-size: 10px !important;
+        padding: 4px;
+    }
+
+    section{
+        min-height: 422px;
+    }
+
+    #menu ul {
+        font-size: 10px;
+        margin-left: 14px;
+        line-height: 40px;
+    }
+
+    #banner img {
+        height: 121px;
+    }
+
+    #textbanner h2 {
+        font-size: 13px;
+    }
+
+    #textbanner p {
+        font-size: 10px;
+    }
+
+    #titulo {
+        font-size: 10px;
+    }
+
+    #autor {
+        font-size: 10px;
+    }
+
+    .slider{
+        height: 150px;
+    }
+
+    .slider ul li img {
+        height: 28%;
+    }
+
+    #contacto {
+        margin-left: 0px;
+    }
+
+    th, td {
+        height: 14px;
+        font-size: 6px;
+    }
+    #footer li {
+        width: 56px;
+    }
+
+   
+}
+
+@media (max-width: 568px){
+    .transparencia{
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .pagina-libro{
+        height: 100%;
+    }
+
+    .contenido-libro{
+        margin: 0;
+    }
+}
+
+@media (max-width: 458px){
+    #menu ul {
+        font-size: 10px;
+        margin-left: 0px;
+        line-height: 40px;
+    }
+
+    #menu ul li {
+        margin-right: 0px;
+    }
+
+    #textbanner p {
+        width: 78%;
+        display: inline-table;
+    }
+
+    #banner img {
+        height: 80px;
+    }
+    .letreros h1 {
+        font-size: 22px;
+    }
+    .contenido{
+        margin-left: 20px;
+    }
+
+    .form{
+        height: 420px;
+    }
+
+    #formulario{
+        width: 250px !important;
+    }
+
+    #logo-formulario img {
+        height: 66px;
+    }
+
+    #signup{
+        min-width: 90px;
+        margin-right: 5px !important;
+    }    
+
+}

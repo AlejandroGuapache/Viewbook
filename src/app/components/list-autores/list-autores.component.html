@@ -1,0 +1,9 @@
+<div class="categorias">
+    <div class="content-categorias">
+        <ul *ngFor="let autor of autores">
+            <li class="autores"><a (click) = "cambiarAutor(autor)"> <img src="./assets/images/ico_autor.png"> {{autor}}</a> </li>
+        </ul>
+    </div>
+</div>
+
+<app-autores [autor] = "autor"></app-autores>

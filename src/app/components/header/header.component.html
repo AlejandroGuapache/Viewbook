@@ -1,0 +1,52 @@
+<header id="header">
+    <div class="center">
+        <div id="logo">
+            <img src="./assets/images/logo.png" />
+        </div>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a [routerLink] = "['/home']" routerLinkActive="active"> Inicio </a>
+                </li>
+                <li>
+                    <a  [routerLink] = "['/libros']" routerLinkActive="active" > Libros </a>
+                </li>
+                <li>
+                    <a [routerLink] = "['/categorias']" routerLinkActive="active"> Categoria </a>
+                </li>
+                <li>
+                    <a  [routerLink] = "['/autores']" routerLinkActive="active"> Autores </a>
+                </li>
+
+                <li *ngIf="user">
+                    <a [routerLink] = "['/mis-libros', user.id]"> Mis libros </a>
+                </li>
+
+                <div id="registro" *ngIf="!user">
+                    <li id="signup">
+                        <img src="../../../assets/images/myaccount.png"/>
+                        <a  [routerLink] = "['/login']" *ngIf="!user"> 
+                            <span> Mi Cuenta</span></a>
+                    </li>
+                </div>
+
+                <div id="registro-nombre" *ngIf="user">
+                    <li id="signup" *ngIf="user && user.admin == true">
+                        <a  [routerLink] = "['/update-usuario', user.id]" *ngIf="user"> <span>Admin</span></a>
+                    </li>
+
+                    <li id="signup" *ngIf="user && user.admin == false">
+                        <a  [routerLink] = "['/update-usuario', user.id]" *ngIf="user"> <span>{{user.nombre}} {{user.apellido1}}</span></a>
+                    </li>
+
+                    <li>
+                        <a id="cerrar-sesion" (click) = "logout()" *ngIf="user">Cerrar Sesión</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="clear-fix"></div>

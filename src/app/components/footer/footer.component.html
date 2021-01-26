@@ -1,0 +1,44 @@
+<div class="clear-fix"></div>
+
+<footer id="footer">
+    <div id="contacto">
+        <table>
+            <thead>
+                <tr>
+                    <th>ViewBook Library</th>
+                    <th> Información </th>
+                    <th>Contactanos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ViewBook fue inagurado en 1920.
+                        100 años satisfaciendo a nuestros clientes con una calidad inmejorable.
+                    </td>
+                    <td>
+                        <ul>
+                            <li *ngIf="user && user.admin == true"> <a [routerLink] = "['/usuarios']" > Usuarios </a></li>
+                            <li> <a [routerLink] = "['/home']">Inicio </a></li>
+                            <li> <a [routerLink] = "['/contacto']"> Contacto </a> </li>
+                            <li> <a  [routerLink] = "['/autores']">  Autores </a> </li>
+                            <li> <a  [routerLink] = "['/categoria']">  Categoria </a> </li>
+
+                        </ul>
+                    </td>
+
+                    <td>
+                        Calle Ficticia, 18 - 28031 <br>
+                        Tel: 692854125 <br>
+                        info@viewbook.com <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr width="76%" size="1px" color="gray" />
+    <div id="copy" class="center">
+        <p>
+            2020 &copy; ViewBook
+        </p>
+    </div>
+</footer>

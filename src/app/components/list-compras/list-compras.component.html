@@ -1,0 +1,33 @@
+<table class="tabla-compra">
+    <thead>
+        <tr class="tabla-compra">
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>DNI</th>
+            <th>Dirección</th>
+            <th>Correo</th>
+            <th>Población</th>
+            <th>Provincia</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="fila" *ngFor="let usuario of usuarios ">
+            <td *ngIf="usuarios">{{usuario.id}}</td>
+            <td *ngIf="usuarios">{{usuario.nombre}}</td>
+            <td *ngIf="usuarios">{{usuario.apellido1}} {{usuario.apellido2}}</td>
+            <td *ngIf="usuarios">{{usuario.dni}}</td>
+            <td *ngIf="usuarios">{{usuario.direccion}}</td>
+            <td *ngIf="usuarios">{{usuario.correo}}</td>
+            <td *ngIf="usuarios">{{usuario.poblacion}}</td>
+            <td *ngIf="usuarios">{{usuario.provincia}}</td>
+            <td *ngIf="usuarios">{{usuario.edad}}</td>
+            <td *ngIf="usuarios">{{usuario.sexo}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p *ngIf="usuarios" class="ventas">Ventas Totales: {{usuarios.length}}</p>

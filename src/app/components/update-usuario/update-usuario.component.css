@@ -1,0 +1,9 @@
+#list-libros{
+    float: right;
+}
+
+#content-list{
+    min-width: 300px;
+    min-height: 300px;
+    background: red;
+}

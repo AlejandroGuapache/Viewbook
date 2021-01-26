@@ -1,0 +1,49 @@
+<section id="signup-form" class="center form">
+    <div id="logo-formulario">
+        <img src="./assets/images/logo.png" />
+    </div>
+
+    <form class="campos-form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <div class="form-group">
+            <label class="contacto-form">Nombre:</label>
+            <input type="text" name="nombre" placeholder="Nombre" formControlName="nombre" />
+            <div class="error" *ngIf="form.get('nombre').hasError('required') && (form.get('nombre').dirty || form.get('nombre').touched)" >
+                Este campo es obligatorio
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="contacto-form">Asunto:</label>
+            <input type="text" name="asunto" placeholder="Asunto" formControlName="asunto" />
+            <div class="error" *ngIf="form.get('asunto').hasError('required') && (form.get('asunto').dirty || form.get('asunto').touched)" >
+                Este campo es obligatorio
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="contacto-form">Correo de contacto:</label>
+            <input type="email" name="correo" placeholder="Correo electrónico" formControlName="correo" />
+            <div class="error" *ngIf="form.get('correo').hasError('required') && (form.get('correo').dirty || form.get('correo').touched)" >
+                Este campo es obligatorio
+            </div>
+            <div class="error" *ngIf="form.get('correo').hasError('correo')">
+                El correo electrónico está mal
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="contacto-form">Mensaje:</label>
+            <textarea name="texto" placeholder="Escribe algo" formControlName="texto" rows="11" cols="34" ></textarea>
+            <div class="error" *ngIf="form.get('texto').hasError('required') && (form.get('texto').dirty || form.get('texto').touched)" >
+                Este campo es obligatorio
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <input type="submit" value="ENVIAR" />
+    </form>
+
+    <hr width="75%" size="1px" color="gray">
+
+    <a [routerLink]="['/home']" class="center btn"> VOLVER </a>
+</section>

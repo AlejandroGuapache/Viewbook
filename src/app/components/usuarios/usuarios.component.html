@@ -1,0 +1,25 @@
+<section>
+    <div id="card" class="center user-card" *ngFor="let usuario of usuarios">
+        <div id="foto-card">
+            <img src="./assets/images/user.jpg" alt="Avatar" style="width:100%">
+        </div>
+
+        <div class="container">
+            <h5>Nombre: {{usuario.nombre}} </h5>
+            <h5>Apellidos: {{usuario.apellido1 + ' ' + usuario.apellido2}} </h5>
+            <h5>Dirección: {{usuario.direccion}}</h5>
+            <h5>Provincia: {{usuario.provincia}} </h5>
+            <h5>Población: {{usuario.poblacion}}</h5>
+        </div>
+
+        <div id="btns-cards">
+            <a [routerLink]="['/update-usuario', usuario.id]" id="modificar" class="btn-usuario-modificar"> Modificar
+            </a>
+            <a (click) = "delete(usuario.dni)" id="modificar" class="btn-usuario-eliminar"> Eliminar </a>
+        </div>
+        
+        <div *ngIf="!usuario.nombre">
+            <h1>No hay usuarios</h1>
+        </div>
+    </div>
+</section>

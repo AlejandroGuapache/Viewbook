@@ -1,0 +1,65 @@
+<app-slider></app-slider>
+
+<!-- Novedades -->
+<div id="novedades">
+    <div class="center letreros">
+        <div>
+            <h1>Novedades</h1>
+        </div>
+    </div>
+
+    <div class="contenido center">
+        <article *ngFor="let libro of libros">
+            <div class="portada">
+                <a [routerLink]="['/libro', libro.isbn]"> <img src="assets/images/portada.jpg" /> </a>
+                <p id="titulo">{{libro.titulo}}</p>
+                <p id="autor">{{libro.autor}}</p>
+                <a (click)="addLibro(libro)" *ngIf="user" class="center btn-comprar"> Comprar </a>
+                <a [routerLink]="['/login']" *ngIf="!user" class="center btn-comprar"> Comprar </a>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- Mas vendidos -->
+
+<div id="masvendidos">
+    <div class="center letreros">
+        <div>
+            <h1>Los más Vendidos</h1>
+        </div>
+    </div>
+
+    <div class="contenido center">
+        <article *ngFor="let libro of libros">
+            <div class="portada">
+                <img src="assets/images/portada.jpg" />
+                <p id="titulo">{{libro.titulo}}</p>
+                <p id="autor">{{libro.autor}}</p>
+                <a (click)="addLibro(libro)" *ngIf="user" class="center btn-comprar"> Comprar </a>
+                <a [routerLink]="['/login']" *ngIf="!user" class="center btn-comprar"> Comprar </a>
+            </div>
+        </article>
+
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7hdSRUGsL8s" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</div>
+
+
+<div class="clear-fix"></div>
+
+<div id="banner" class="audiolibro">
+    <a href="./index.html"><img src="./assets/images/bannerAudio.png" alt="imagen de audiolibro" /></a>
+
+    <div id="textbanner">
+        <h2>Compra los últimos audio libros</h2>
+        <p> Un audiolibro es la grabación de los contenidos de un libro leídos en voz alta. Un libro hablado.
+            Aprovechando las posibilidades que ofrecen las nuevas tecnologías en el campo de la información y la
+            difusión de contenidos, ha aumentado su difusión. <br> <br>
+            Haz click <a href="#"> aquí </a> para ir a la sección de audiolibro o haz click sobre la imágen
+        </p>
+    </div>
+</div>
+<div class="clear-fix"></div>
